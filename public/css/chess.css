@@ -1,0 +1,341 @@
+.chess-mint{
+  background-color: #111320;
+}
+
+.game-area{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-info{
+  height: 560px;
+  margin-left: 5rem;
+  width: 150px;
+  /* border: 1px solid #ced0ed; */
+}
+
+.game-info.sm{
+  height: 480px;
+}
+
+.game-info .player-a{
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.game-info .player-b{
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.game-info .player-info{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.game-info .player-info img{
+  width: 35px;
+  height: 35px;
+  border-radius: 100px;
+}
+
+.game-info .player-info h3{
+  color: #64699a;
+}
+
+.game-info .player-info .points{
+  color: #b7bbde;
+}
+
+.game-info .player-info .status{
+  width: 10px;
+  height: 10px;
+  border-radius: 100px;
+}
+
+.game-info .player-info .status.connected{
+  background-color: greenyellow;
+}
+
+.game-info .player-info .status.left{
+  background-color: red;
+}
+
+.game-info .captured-box{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.game-info .captured-box.top{
+  margin-top: 1rem;
+}
+
+.game-info .captured-box.bottom{
+  margin-bottom: 1rem;
+}
+
+.game-info .captured-box .piece{
+  font-size: 15px;
+  margin-right: 0.3rem;
+}
+
+.game-info .player-a .captured-box .piece{
+  color: #ecedfd;
+}
+
+.game-info .player-b .captured-box .piece{
+  color: #4d5175;
+}
+
+.board-wrapper{
+  width: 560px;
+  height: 560px;
+  /* margin: auto auto; */
+}
+
+.chess-board{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+}
+
+.chess-board .piece-box{
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.board-wrapper.sm {
+  width: 480px;
+  height: 480px;
+}
+
+.board-wrapper.sm .chess-board .piece-box{
+  width: 60px;
+  height: 60px;
+}
+
+.chess-board .piece-box.black{
+  background-color: #242740;
+}
+
+.chess-board .piece-box.light{
+  background-color: #fff;
+}
+
+.chess-board .piece-box .piece{
+  font-size: 25px;
+}
+
+.chess-board .piece-box .piece.chessr-rook{
+  font-size: 22px;
+}
+
+.chess-board .piece-box.black .piece{
+  color: #fff;
+}
+
+.chess-board .piece-box.light .piece{
+  color: #242740;
+}
+
+.chess-board .piece-box.black .piece.dark,
+.chess-board .piece-box.light .piece.dark{
+  color: #4d5175 !important;
+}
+
+.chess-board .piece-box.black .piece.light,
+.chess-board .piece-box.light .piece.light{
+  color: #ced0ed !important;
+}
+
+.chess-board .piece-box.label::before{
+  position: absolute;
+  top: 50%;
+  left: -45%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 15px;
+}
+
+.chess-board .piece-box.label:nth-child(1)::before{
+  content: "8";
+}
+
+.chess-board .piece-box.label:nth-child(9)::before{
+  content: "7";
+}
+
+.chess-board .piece-box.label:nth-child(17)::before{
+  content: "6";
+}
+
+.chess-board .piece-box.label:nth-child(25)::before{
+  content: "5";
+}
+
+.chess-board .piece-box.label:nth-child(33)::before{
+  content: "4";
+}
+
+.chess-board .piece-box.label:nth-child(41)::before{
+  content: "3";
+}
+
+.chess-board .piece-box.label:nth-child(49)::before{
+  content: "2";
+}
+
+.chess-board .piece-box.label:nth-child(57)::before{
+  content: "1";
+}
+
+.chess-board .piece-box.label-bottom::after{
+  position: absolute;
+  left: 50%;
+  bottom: -55%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 13px;
+}
+
+.chess-board .piece-box.label-bottom:nth-child(57)::after{
+  content: "A";
+}
+
+.chess-board .piece-box.label-bottom:nth-child(58)::after{
+  content: "B";
+}
+
+.chess-board .piece-box.label-bottom:nth-child(59)::after{
+  content: "C";
+}
+
+.chess-board .piece-box.label-bottom:nth-child(60)::after{
+  content: "D";
+}
+
+.chess-board .piece-box.label-bottom:nth-child(61)::after{
+  content: "E";
+}
+
+.chess-board .piece-box.label-bottom:nth-child(62)::after{
+  content: "F";
+}
+
+.chess-board .piece-box.label-bottom:nth-child(63)::after{
+  content: "G";
+}
+
+.chess-board .piece-box.label-bottom:nth-child(64)::after{
+  content: "H";
+}
+
+.chat-area{
+  background-color: #151827;
+  overflow: hidden;
+}
+
+.chat-head{
+  width: 100%;
+  padding: 1rem;
+  background-color: #202337;
+  display: flex;
+  align-items: center;
+}
+
+.chat-head img{
+  border-radius: 100px;
+  width: 40px;
+}
+
+.chat-head .leave-btn{
+  line-height: 15px;
+  padding-bottom: 0.55rem;
+  min-width: unset;
+  background-color: #2a2d49;
+  color: #bdbfe0;
+}
+
+.chat-body{
+  width: 100%;
+  background-color: #191b2a;
+  min-height: 200px;
+  height: 640px;
+  overflow-y: scroll;
+  padding: 1rem;
+}
+
+.chat-body::-webkit-scrollbar{
+  display: none;
+}
+
+.chat-body .message{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.chat-body .message .body{
+  max-width: 80%;
+  min-width: 30%;
+  background-color: #404570;
+  padding: 0.35rem 0.45rem;
+  border-radius: 6px;
+}
+
+
+.chat-body .message.friend .body{
+  
+}
+
+.chat-body .message.friend .body h4{
+  color: #85a8e7;
+}
+
+.chat-body .message.user .body{
+  margin-left: auto;
+}
+
+.chat-body .message.user .body h4{
+  color: #fff;
+}
+
+.chat-foot{
+  width: 100%;
+  padding: 1rem;
+}
+
+.chat-foot .message-input{
+  width: 75%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  resize: none;
+  height: 40px;
+  padding: 0;
+}
+.chat-foot .message-input:focus,
+.chat-foot .message-input:active{
+  outline: none;
+}
+
+.chat-foot .send-btn{
+  line-height: 15px;
+  padding-bottom: 0.55rem;
+  min-width: unset;
+  background-color: #2a2d49;
+  color: #bdbfe0;
+}
